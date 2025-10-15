@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <h2 class="mb-4">Add a New Transaction 💸</h2>
+
+  <form action="/add" method="POST">
+    <div class="mb-3">
+      <label>Type</label>
+      <select name="type" class="form-control" required>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label>Category</label>
+      <input type="text" name="category" placeholder="e.g., Food, Rent, Salary" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label>Amount</label>
+      <input type="number" name="amount" placeholder="Enter amount" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label>Description</label>
+      <input type="text" name="description" placeholder="Optional details" class="form-control">
+    </div>
+
+    <button class="btn btn-success">💾 Save Transaction</button>
+    <a href="/" class="btn btn-secondary">← Back</a>
+  </form>
+</div>
+
+<%- include('partials/footer') %>
